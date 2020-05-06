@@ -1,0 +1,60 @@
+page {
+  background-color: var(--bgColor);
+}
+.tabs {
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 5rpx;
+}
+.tabs .tabs-title {
+  display: flex;
+  height: 88rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.tabs .tabs-title .tabs-title-item {
+  color: #676767;
+  padding: 20rpx;
+}
+.tabs .tabs-title .active {
+  color: #3D3D3D;
+  font-weight: 600;
+  position: relative;
+}
+.tabs .tabs-title .active::before {
+  content: '';
+  height: 4rpx;
+  width: 184rpx;
+  background-color: #EA4350;
+  position: absolute;
+  bottom: 0;
+  left: -42rpx;
+}
+.orede {
+  padding-bottom: 21rpx;
+}
+.orders {
+  background-color: #fff;
+  margin-bottom: 10rpx;
+  padding: 39rpx 32rpx;
+  height: 250rpx;
+  display: flex;
+  box-sizing: border-box;
+}
+.orders-left {
+  width: 150rpx;
+  height: 100%;
+  color: #696969;
+}
+.orders-rigth {
+  flex: 1;
+  text-align: right;
+}
+.orders-rigth .orders-rigth-price {
+  color: var(--mainColor);
+}
+.orders-rigth .orders-rigth-price::before {
+  content: '¥';
+  color: var(--mainColor);
+  font-size: 80%;
+}

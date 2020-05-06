@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "goodsItem": "/components/goods-item/index"
+  },
+  "navigationBarTitleText": "购物车",
+  "navigationBarTextStyle": "white"
+}

@@ -1,0 +1,19 @@
+<view class='empower'>
+    <image class="empower-img" src="/images/ugo.png" mode="aspectFit" />
+</view>
+<view class='empower-body'>
+    <view class='empower-body-title'>
+        登录后该应用将获得以下权限
+    </view>
+    <view class='empower-body-icon'>
+        <view class="iconfont {{ true ? 'icon-yigouxuan':'icon-weixuanzhong'}}"></view>
+        <view class="empower-body-icon-text">
+            获得你的公开信息 ( 昵称、头像等 )
+        </view>
+
+    </view>
+
+</view>
+
+
+<button class='empower-btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信授权登录</button>

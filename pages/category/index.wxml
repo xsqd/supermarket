@@ -1,0 +1,30 @@
+<!-- 1.搜索部分 -->
+<search />
+<!-- 2.商品分类 -->
+<view class="main">
+    <!-- 左侧 -->
+    <scroll-view class="main-left" scroll-y>
+        <view class="main-left-title {{activeIndex === index ? 'active':''}}" wx:for='{{cateLeft}}' wx:key='cat_id'
+            bindtap='changactiveIndex' data-index="{{ index }}">
+            {{item.cat_name}}
+        </view>
+    </scroll-view>
+    <!-- 右侧 -->
+    <scroll-view class="main-rigth" scroll-y scroll-top="{{ rightScrollTop }}">
+        <view wx:for='{{cateRigth}}' wx:key='cat_id' wx:if='{{item.children}}'>
+            <view class="main-rigth-title">
+                {{item.cat_name}}
+            </view>
+            <view class="main-rigth-list">
+                <view class="main-rigth-list-item" wx:for='{{item.children}}' wx:key='cat_id' wx:for-item='item2'>
+                    <navigator url="/pages/search/index?cat_id={{item2.cat_id}}" open-type="navigate">
+                        <image class="main-rigth-list-img" src="{{item2.cat_icon}}" mode="aspectFit|" />
+                        <view class="main-rigth-list-title">
+                            {{item2.cat_name}}
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

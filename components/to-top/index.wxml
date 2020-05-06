@@ -1,0 +1,3 @@
+<view class="index-to-top" bindtap="goToTop">
+    <image class="index-to-top-img" src="../../images/4fanhuidingbubai.png" />
+</view>

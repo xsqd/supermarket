@@ -1,0 +1,108 @@
+page{
+    background-color: var(--bgColor);
+}
+.cart-item {
+    padding: 18rpx 26rpx 0;
+    display: flex;
+    .cart-item-left {
+        width: 100rpx;
+        display: flex;
+        align-items: center;
+        .iconfont {
+            font-size: 50rpx;
+            color: var(--mainColor);
+        }
+    }
+    .cart-item-rigth {
+        flex: 1;
+        position: relative;
+        .cart-item-rigth-count {
+            position: absolute;
+            right: 30rpx;
+            bottom: 20rpx;
+            display: flex;
+            .iconfont {
+                font-size: 40rpx;
+            }
+            .cart-count-number {
+                color: #8A8A8A;
+                font-weight: 30rpx;
+                min-width: 40rpx;
+                text-align: center;
+                padding: 0 5rpx;
+            }
+        }
+    }
+}
+.bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 83rpx;
+    align-items: center;
+    display: flex;
+    padding: 22rpx;
+    border-top: 1px solid #DEDEDE;
+    .bar-info {
+        flex: 1;
+        display: flex;
+        .select-all {
+            display: flex;
+            align-items: center;
+            .iconfont {
+                font-size: 50rpx;
+                color: var(--mainColor);
+                padding-right: 24rpx;
+            }
+            .bar-select-txt {
+                color: #8A8A8A;
+                font-size: 30rpx;
+                padding-right: 36rpx;
+            }
+        }
+        .bar-total-txt {
+            color: #292929;
+            padding-right: 6rpx;
+        }
+        .bar-total-price {
+            color: var(--mainColor);
+            &::before {
+                content: '¥';
+                font-size: 80%;
+            }
+        }
+    }
+    .bar-btn {
+        width: 200rpx;
+        height: 60rpx;
+        line-height: 60rpx;
+        border-radius: 30rpx;
+        text-align: center;
+        background-color: var(--mainColor);
+        color: #fff;
+        font-size: 30rpx;
+    }
+    .disabled {
+        background-color: #eeeeee;
+        color: #afafaf;
+    }
+}
+
+.cart-empty {
+    padding-top: 300rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-img {
+        width: 300rpx;
+        height: 300rpx;
+    }
+    &-btn {
+        margin-top: 20rpx;
+        padding: 10rpx 20rpx;
+        border-radius: 10rpx;
+        background-color: var(--mainColor);
+        color: #fff;
+    }
+}

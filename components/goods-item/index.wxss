@@ -1,0 +1,30 @@
+.doods-navigator {
+  display: flex;
+}
+.doods-navigator .goods {
+  padding: 9rpx 15rpx 9rpx 0;
+  width: 191rpx;
+  height: 191rpx;
+}
+.doods-navigator .goods .goods-img {
+  width: 191rpx;
+  height: 191rpx;
+}
+.doods-navigator .goods-info {
+  padding: 26rpx 0;
+}
+.doods-navigator .goods-info .goods-name {
+  padding-bottom: 45rpx;
+}
+.doods-navigator .goods-info .goods-name .goods-name-item {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.doods-navigator .goods-info .goods-price {
+  color: #EA4350;
+}
+.doods-navigator .goods-info .goods-price::before {
+  content: '¥';
+}

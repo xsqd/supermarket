@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "search": "/components/search/index",
+    "to-top": "/components/to-top/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "商品列表",
+    "navigationBarTextStyle": "white"
+}

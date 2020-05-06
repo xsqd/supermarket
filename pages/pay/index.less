@@ -1,0 +1,100 @@
+page{
+    background-color: var(--bgColor);
+}
+.address {
+    height: 187rpx;
+    box-sizing: border-box;
+    margin: 20rpx 20rpx 35rpx;
+    background-color: #fff;
+    border-radius: 5rpx;
+    padding: 16rpx 23rpx 34rpx;
+    color: #434343;
+    &-detail {
+        height: 84rpx;
+        font-weight: 550;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        padding-bottom: 20rpx;
+    }
+    &-user {
+        display: flex;
+        &-name {
+            padding-right: 20rpx;
+        }
+    }
+    &-btn {
+        display: flex;
+        justify-content: center;
+        padding-top: 30rpx;
+        &-text{
+            text-align: center;
+            width: 303rpx;
+            height: 89rpx;
+            line-height: 89rpx;
+            border: 2px solid #ea4350;
+            border-radius: 44.5rpx;
+            color: #ea4350;
+        }
+    }
+}
+.choose {
+    margin: 20rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 5rpx;
+    padding: 16rpx 23rpx 34rpx;
+    color: #434343;
+    &-title {
+        font-weight: 550;
+    }
+    &-list {
+        position: relative;
+        &-price {
+            position: absolute;
+            right: 0;
+            bottom: 30rpx;
+        }
+    }
+}
+.bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 83rpx;
+    align-items: center;
+    display: flex;
+    padding: 22rpx;
+    border-top: 1px solid #DEDEDE;
+    .bar-info {
+        flex: 1;
+        display: flex;
+        .bar-total-txt {
+            color: #292929;
+            padding-right: 6rpx;
+        }
+        .bar-total-price {
+            color: var(--mainColor);
+            &::before {
+                content: '¥';
+                font-size: 80%;
+            }
+        }
+    }
+    .bar-btn {
+        width: 200rpx;
+        height: 60rpx;
+        line-height: 60rpx;
+        border-radius: 30rpx;
+        text-align: center;
+        background-color: var(--mainColor);
+        color: #fff;
+        font-size: 30rpx;
+    }
+    .disabled {
+        background-color: #eeeeee;
+        color: #afafaf;
+    }
+}

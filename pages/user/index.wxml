@@ -1,0 +1,37 @@
+<view class="personal-head">
+    <view>
+        <image class="avatar_bg" src="{{ userInfo.avatarUrl || '/images/head.jpg'}}" mode="aspectFill" />
+        <image class="personal-head-img" src="{{ userInfo.avatarUrl || '/images/head.jpg'}}" mode="aspectFit" />
+        <view class="personal-head-btn">
+            {{ userInfo.nickName || '点击登录'}}
+        </view>
+        <block wx:if="{{ !userInfo.nickName }}">
+            <auth class="auth_btn" bindupdateUserInfo="updateUserInfo"></auth>
+        </block>
+    </view>
+</view>
+<view class="personal-body">
+    <view class="personal-list">
+        <navigator url="/pages/order/index?type={{item.type}}"
+            class="personal-list-item {{activeIndex === index ? 'active' : ''}}" wx:for='{{personalList}}' wx:key='name'
+            data-index="{{index}}" bindtap='changeListIndex'>
+            <view class="iconfont {{item.icon}}"></view>
+            <view>{{item.name}}</view>
+        </navigator>
+    </view>
+    <view class="personal-function">
+        <view class="personal-contact" wx:for='{{personalFunction}}' wx:key='name'>
+            <view class="personal-contact-left">
+                <view class="iconfont {{item.icon}}"></view>
+                <view>
+                    {{item.name}}
+                </view>
+            </view>
+            <view class="personal-contact-rigth">
+                {{item.value}}
+            </view>
+        </view>
+
+    </view>
+
+</view>

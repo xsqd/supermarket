@@ -1,0 +1,31 @@
+.empower {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 100rpx auto;
+}
+.empower-img {
+  width: 150rpx;
+  height: 150rpx;
+}
+.empower-body {
+  padding: 50rpx;
+}
+.empower-body-title {
+  border-top: 1px solid #eee;
+  padding: 50rpx 0;
+  font-weight: 600;
+}
+.empower-body-icon {
+  display: flex;
+  color: #666;
+}
+.empower-body-icon .iconfont {
+  padding-right: 10rpx;
+  font-size: 33rpx;
+}
+.empower-btn {
+  margin-top: 30rpx;
+  width: 100%;
+  background-color: #1aad19;
+  color: #fff;
+}

@@ -1,0 +1,57 @@
+<!-- 1.banner部分 -->
+<swiper class="goods-swiper" autoplay circular indicator-dots indicator-color="rgba(0,0,0,.3)"
+    indicator-active-color='#EA4350' current="0">
+    <swiper-item wx:for='{{pics}}' wx:key='pics_id'>
+        <image bindtap='showBigImg' data-current="{{item.pics_big}}" class="goods-swiper-img" src="{{item.pics_big}}"
+            mode="aspectFit" />
+    </swiper-item>
+</swiper>
+<!-- 2.商品信息 -->
+<view class="goods-info">
+    <view class="goods-info-head">
+        <view class="goods-info-head-left">
+            {{goods_price}}
+        </view>
+        <view class="goods-info-head-rigth">
+            <view class="iconfont icon-fenxiang">
+                <button open-type='share' class="share-btn"></button>
+            </view>
+            <view class="iconfont icon-buoumaotubiao45" bindtap='addToCollect'></view>
+        </view>
+    </view>
+    <view class="goods-info-body">
+        {{goods_name}}
+    </view>
+</view>
+<!-- 分隔物，全局定义用于分隔模块的 -->
+<view class="divider">
+</view>
+<!-- 3.图文详情 -->
+<view class="detail">
+    图文详情
+    <view class="detail-rich">
+        <rich-text nodes="{{goods_introduce}}"></rich-text>
+    </view>
+</view>
+<!-- 4.底部按钮 -->
+<view class="bottom-bar">
+    <view class="bottom-bar-icon">
+        <button open-type='contact' class="contact-btn">客服</button>
+        <view class="iconfont icon-kefu"></view>
+        <view class="bottom-bar-icon-text">
+            联系客服
+        </view>
+    </view>
+    <view class="bottom-bar-icon" bindtap='goPageCart'>
+        <view class="iconfont icon-gouwuche1"></view>
+        <view class="bottom-bar-icon-text">
+            购物车
+        </view>
+    </view>
+    <view class="bottom-bar-btn" bindtap='addToCart'>
+        加入购物车
+    </view>
+    <view class="bottom-bar-btn" bindtap='bugNow'>
+        立即购买
+    </view>
+</view>

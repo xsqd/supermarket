@@ -1,0 +1,46 @@
+<!-- 1.搜索部分 -->
+<search></search>
+<!-- 2.banner部分 -->
+<swiper class="index-swiper" autoplay circular indicator-dots indicator-color="rgba(255,255,255,.3)"
+    indicator-active-color="#fff" current="0" interval="3000">
+    <swiper-item class="index-swiper-item" wx:for='{{swiperList}}' wx:key='goods_id'>
+        <navigator url="{{item.navigator_url}}" open-type="navigate">
+            <image class="index-swiper-img" src="{{item.image_src}}" mode="aspectFit" />
+        </navigator>
+    </swiper-item>
+</swiper>
+<!-- 3.导航部分 -->
+<view class="index-nav">
+    <navigator url="{{ item.navigator_url || '/pages/search/index?query=' + item.name }}"
+        open-type="{{ item.open_type || 'navigate' }}" wx:for='{{navList}}' wx:key='name'>
+        <image class="index-nav-img" src="{{item.image_src}}" mode="aspectFit" />
+    </navigator>
+</view>
+<!-- 商品楼层 -->
+<view class="index-floor" wx:for='{{floorList}}' wx:key='name' wx:for-item='floorItem'>
+    <!-- 顶部title -->
+    <view>
+        <image class="index-floor-title" src="{{floorItem.floor_title.image_src}}" mode="aspectFit" />
+    </view>
+    <!-- 产品图片 -->
+    <view class="index-product-bottom">
+        <!-- 左边图片 -->
+        <navigator url="{{floorItem.product_list[0].navigator_url}}"
+            open-type="navigate">
+            <image class="index-product-left-img" src="{{floorItem.product_list[0].image_src}}" />
+        </navigator>
+        <!-- 右边图片 -->
+        <view class="index-product-rigth">
+            <navigator url="{{floorItem.product_list[index].navigator_url}}" open-type="navigate" wx:for='{{floorItem.product_list}}'
+                wx:key='name' wx:if='{{index > 0}}'>
+                <view class="index-product-rigth-item" style="width:{{item.image_width}}rpx;">
+                    <image class="index-product-rigth-img" src="{{item.image_src}}" />
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<!-- 返回顶部 -->
+<view hidden="{{ !showTop }}">
+    <to-top></to-top>
+</view>

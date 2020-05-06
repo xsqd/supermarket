@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "goodsItem": "/components/goods-item/index"
+  },
+  "navigationBarTitleText": "支付",
+  "navigationBarTextStyle": "white"
+}

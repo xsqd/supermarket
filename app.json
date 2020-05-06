@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/index",
+    "pages/goods_list/index",
+    "pages/goods_detail/index",
+    "pages/cart/index",
+    "pages/collect/index",
+    "pages/order/index",
+    "pages/search/index",
+    "pages/user/index",
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/auth/index",
+    "pages/pay/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EA4350",
+    "navigationBarTitleText": "黑马小程序",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "color": "#8C8D8D",
+    "selectedColor": "#E03440",
+    "backgroundColor": "#FAFAFA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "iconPath": "./images/index.png",
+        "selectedIconPath": "./images/index_selected.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "./images/category.png",
+        "selectedIconPath": "./images/category_selected.png",
+        "pagePath": "pages/category/index",
+        "text": "分类"
+      },
+      {
+        "iconPath": "./images/cart.png",
+        "selectedIconPath": "./images/cart_selected.png",
+        "pagePath": "pages/cart/index",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "./images/user.png",
+        "selectedIconPath": "./images/user_selected.png",
+        "pagePath": "pages/user/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

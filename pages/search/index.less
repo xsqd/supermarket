@@ -1,0 +1,55 @@
+.tabs {
+    .tabs-title {
+        display: flex;
+        height: 88rpx;
+        align-items: center;
+        justify-content:space-around;
+        .tabs-title-item {
+            color: #676767;
+            padding: 20rpx;
+        }
+        .active {
+            color: #3D3D3D;
+            font-weight: 600;
+            position: relative;
+            &::before {
+                content: '';
+                height: 4rpx;
+                width: 184rpx;
+                background-color: #EA4350;
+                position: absolute;
+                bottom: 0;
+                left: -42rpx;
+            }
+        }
+    }
+}
+.goods-list {
+    padding: 0 26rpx;
+    display: flex;
+    .doods-navigator {
+        display: flex;
+        .goods {
+            padding: 9rpx 15rpx;
+            width: 191rpx;
+            height: 191rpx;
+            .goods-img {
+                width: 191rpx;
+                height: 191rpx;
+            }
+        }
+        .goods-info {
+            padding: 26rpx 0;
+            font-size: 24rpx;
+            .goods-name {
+                padding-bottom:57rpx;
+            }
+            .goods-price {
+                color: #EA4350;
+                &::before {
+                    content: '¥';
+                }
+            }
+        }
+    }
+}

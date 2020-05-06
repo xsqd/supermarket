@@ -1,0 +1,23 @@
+<view class="SearchBox">
+    <view class="SearchBox-input">
+        <input type="text" placeholder="输入商品名" />
+        <view class="SearchBoxicon iconfont icon-suosou"></view>
+    </view>
+    <view class="SearchBox-btn">搜索</view>
+</view>
+<!-- 产品列表 -->
+<block wx:if="{{goodsList}}">
+    <view class="goods-list" wx:for='{{goodsList}}' wx:key='goods_id'>
+        <navigator class="doods-navigator" url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+            open-type="navigate">
+            <view class="goods">
+                <image class="goods-img" src="{{item.goods_small_logo || '/images/default.png'}}" />
+            </view>
+            <view class="goods-info">
+                <view class="goods-name">
+                    {{item.goods_name}}
+                </view>
+            </view>
+        </navigator>
+    </view>
+</block>

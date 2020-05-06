@@ -1,0 +1,53 @@
+<!-- 有商品的情况 -->
+<block wx:if="{{cart.length}}">
+    <!-- 1.商品列表 -->
+    <view class="cart-list">
+        <view class="cart-item" wx:for='{{cart}}' wx:key='goods_id'>
+            <!-- 左边选中按钮 -->
+            <view class="cart-item-left" bindtap='changselect' data-index="{{index}}">
+                <view class="iconfont {{  item.isSelect ?'icon-xuanze':'icon-choose' }}"></view>
+            </view>
+            <!-- 右边商品列表 -->
+            <view class="cart-item-rigth">
+                <!-- 单个商品组件封装 -->
+                <goodsItem item="{{item}}" />
+                <!-- 价格及加减按钮 -->
+                <view class="cart-item-rigth-count">
+                    <view class="iconfont icon-icon-1" bindtap='changcountReduce' data-index="{{index}}"></view>
+                    <view class="cart-count-number">
+                        {{item.number}}
+                    </view>
+                    <view class="iconfont icon-icon-" bindtap='changcountAdd' data-index="{{index}}"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 2.购物车结算条 -->
+    <view class="bar">
+        <view class="bar-info">
+            <view class="select-all" bindtap='changSelectAll'>
+                <view class="iconfont {{  selectAll ?'icon-xuanze':'icon-choose' }}"></view>
+                <text class="bar-select-txt">全选</text>
+            </view>
+            <view class="bar-total">
+                <text class="bar-total-txt">合计 : </text>
+                <text class="bar-total-price">{{totalPrice || '0'}}</text>
+            </view>
+        </view>
+        <view class="bar-btn {{ totalcount === 0 ? 'disabled' : ''}}" bindtap='goToPay'>
+            去结算({{totalcount || '0'}})
+        </view>
+    </view>
+</block>
+<!-- 没有商品的情况 -->
+<block wx:else>
+    <view class="cart-empty">
+        <image class="cart-empty-img" src="/images/cart.gif" mode="aspectFit" />
+        <view class="cart-empty-text">
+            购物车空空如也
+        </view>
+        <navigator class="cart-empty-btn" url="/pages/index/index" open-type="switchTab">
+            去首页逛逛
+        </navigator>
+    </view>
+</block>

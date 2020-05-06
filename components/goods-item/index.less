@@ -1,0 +1,30 @@
+.doods-navigator {
+    display: flex;
+    .goods {
+        padding: 9rpx 15rpx 9rpx 0;
+        width: 191rpx;
+        height: 191rpx;
+        .goods-img {
+            width: 191rpx;
+            height: 191rpx;
+        }
+    }
+    .goods-info {
+        padding: 26rpx 0;
+        .goods-name {
+            padding-bottom: 45rpx;
+            .goods-name-item {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+            }
+        }
+        .goods-price {
+            color: #EA4350;
+            &::before {
+                content: '¥';
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<navigator class="doods-navigator" url="/pages/goods_detail/index?goods_id={{item.goods_id}}" open-type="navigate">
+        <view class="goods">
+            <image class="goods-img" src="{{item.goods_image || '/images/default.png'}}" />
+        </view>
+        <view class="goods-info">
+            <view class="goods-name">
+                <view class='goods-name-item'>
+                    {{item.goods_name}}
+                </view>
+            </view>
+            <view class="goods-price">
+                {{item.goods_price}}
+            </view>
+        </view>
+</navigator>

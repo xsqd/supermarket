@@ -1,0 +1,74 @@
+.main {
+    display: flex;
+    .main-left {
+        width: 182rpx;
+        //  ~'calc(100vh - 100rpx)' C3新语法  高度100% - 100rpx 搜索框高
+        height: ~'calc(100vh - 100rpx)';
+        background-color: #F3F3F3;
+        .main-left-title {
+            text-align: center;
+            padding: 17rpx 20rpx 37rpx;
+            font-size: 25rpx;
+            color: #585858;
+        }
+        .active {
+            color: #EA4350;
+            font-weight: 700;
+            position: relative;
+            &::before {
+                content: '';
+                width: 5rpx;
+                height: 50rpx;
+                background-color: currentColor;
+                position: absolute;
+                left: 0;
+            }
+        }
+
+    }
+    .main-rigth {
+        display: flex;
+        flex-wrap: wrap;
+        width: 568rpx;
+        height: ~'calc(100vh - 100rpx)';
+        .main-rigth-title {
+            flex: 1;
+            text-align: center;
+            padding: 18rpx 0 21rpx;
+            font-size: 28rpx;
+            color: #575757;
+            &::after {
+                content: '/';
+                color: #9C9C9C;
+                padding-left: 7rpx;
+            }
+            &::before {
+                content: '/';
+                color: #9C9C9C;
+                padding-right: 7rpx;
+            }
+        }
+        .main-rigth-list {
+            padding: 0 48rpx 35rpx;
+            display: flex;
+            flex-wrap: wrap;
+            .main-rigth-list-item {
+                display: inline-block;
+                width: 120rpx;
+                height: 120rpx;
+                padding: 0 56rpx 50rpx 0;
+                &:nth-child(3n) {
+                    padding-right: 0;
+                }
+                .main-rigth-list-img {
+                    width: 120rpx;
+                    height: 120rpx;
+                }
+                .main-rigth-list-title {
+                    text-align: center;
+                    font-size: 25rpx;
+                }
+            } 
+        }
+    }
+}

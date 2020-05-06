@@ -1,0 +1,10 @@
+/**app.wxss**/
+@import "./styles/iconfont.wxss";
+
+/* page 是根标签 */
+page{
+    /* 设置主色调 */
+    --mainColor: #ea4350;
+    --fadeColor: #707070;
+    --bgColor:#f9f9f9
+}

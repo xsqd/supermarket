@@ -1,0 +1,58 @@
+.SearchBox {
+  padding: 15rpx 18rpx;
+  display: flex;
+}
+.SearchBox .SearchBox-input {
+  background-color: #E7E7E7;
+  height: 61rpx;
+  flex: 1;
+  border-radius: 30rpx;
+  position: relative;
+}
+.SearchBox .SearchBox-input input {
+  background-color: #E7E7E7;
+  height: 61rpx;
+  flex: 1;
+  border-radius: 30rpx;
+  padding-left: 2em;
+}
+.SearchBox .SearchBox-input .SearchBoxicon {
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+  font-size: 45rpx;
+  color: #6C6C6C;
+}
+.SearchBox .SearchBox-btn {
+  width: 101rpx;
+  height: 61rpx;
+  text-align: center;
+  line-height: 61rpx;
+  background-color: var(--mainColor);
+  border-radius: 10rpx;
+  color: #fff;
+  margin-left: 15rpx;
+}
+.goods-list {
+  padding: 0 26rpx;
+  display: flex;
+}
+.goods-list .doods-navigator {
+  display: flex;
+}
+.goods-list .doods-navigator .goods {
+  padding: 9rpx 15rpx;
+  width: 191rpx;
+  height: 191rpx;
+}
+.goods-list .doods-navigator .goods .goods-img {
+  width: 191rpx;
+  height: 191rpx;
+}
+.goods-list .doods-navigator .goods-info {
+  padding: 26rpx 0;
+  font-size: 24rpx;
+}
+.goods-list .doods-navigator .goods-info .goods-name {
+  padding-bottom: 57rpx;
+}

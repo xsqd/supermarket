@@ -1,0 +1,23 @@
+<!-- tab部分 -->
+<view class="tabs">
+    <view class="tabs-title">
+        <view class="tabs-title-item {{activeIndex === index ? 'active' : ''}}" wx:for='{{tabs}}' wx:key='id'
+            data-index="{{index}}" bindtap='changeTabsIndex'>
+            {{item.name}}
+        </view>
+    </view>
+</view>
+<view class="orders" wx:for='{{ordersList}}' wx:key='order_id'>
+    <view class="orders-left">
+        <view class="orders-left-text">
+            <view class="orede">订单编号</view>
+            <view class="orede">订单金额</view>
+            <view class="orede">订单日期</view>
+        </view>
+    </view>
+    <view class="orders-rigth">
+        <view class="orders-rigth-number orede">{{item.order_number}}</view>
+        <view class="orders-rigth-price orede">{{item.order_price}}</view>
+        <view class="orders-rigth-date orede">{{item.format_time}}</view>
+    </view>
+</view>

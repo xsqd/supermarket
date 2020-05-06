@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search": "/components/search/index",
+    "to-top": "/components/to-top/index"
+  },
+  "enablePullDownRefresh": true
+}
